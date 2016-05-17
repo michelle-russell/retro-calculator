@@ -10,16 +10,43 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // Outlets
+    @IBOutlet weak var lblScreen: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // Actions
+    @IBAction func onNumberButtonPress(btn: UIButton!){
+        
+        
+        
+    }
+    
+    @IBAction func onAddButtonPress(sender: AnyObject) {
+    }
+    
+    @IBAction func onSubtractButtonPress(sender: AnyObject) {
     }
 
-
+    @IBAction func onMultiplyButtonPress(sender: AnyObject) {
+    }
+    
+    @IBAction func onDivideButtonPress(sender: AnyObject) {
+    }
+    
+    @IBAction func onEqualButtonPress(sender: AnyObject) {
+    }
+    @IBAction func onClearButtonPress(sender: AnyObject) {
+    }
+    
+    
+    
+    
+    
 }
 
