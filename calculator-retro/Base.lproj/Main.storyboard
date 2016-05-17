@@ -221,7 +221,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="onMultiplyButtonPress" destination="wvl-8O-JTD" id="HBL-n0-6dc"/>
+                        <outlet property="lblScreen" destination="dBE-0N-JA6" id="w8G-GW-rOm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
