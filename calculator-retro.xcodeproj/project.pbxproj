@@ -14,6 +14,7 @@
 		AD3BD3C31CEABC9A00F13CCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD3BD3C11CEABC9A00F13CCE /* LaunchScreen.storyboard */; };
 		AD3BD3CE1CEABC9B00F13CCE /* calculator_retroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3BD3CD1CEABC9B00F13CCE /* calculator_retroTests.swift */; };
 		AD3BD3D91CEABC9B00F13CCE /* calculator_retroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3BD3D81CEABC9B00F13CCE /* calculator_retroUITests.swift */; };
+		AD3BD3E71CEAC78900F13CCE /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD3BD3E61CEAC78900F13CCE /* Minecraft.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		AD3BD3D41CEABC9B00F13CCE /* calculator-retroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "calculator-retroUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD3BD3D81CEABC9B00F13CCE /* calculator_retroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculator_retroUITests.swift; sourceTree = "<group>"; };
 		AD3BD3DA1CEABC9B00F13CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD3BD3E61CEAC78900F13CCE /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		AD3BD3B71CEABC9A00F13CCE /* calculator-retro */ = {
 			isa = PBXGroup;
 			children = (
+				AD3BD3E61CEAC78900F13CCE /* Minecraft.ttf */,
 				AD3BD3B81CEABC9A00F13CCE /* AppDelegate.swift */,
 				AD3BD3BA1CEABC9A00F13CCE /* ViewController.swift */,
 				AD3BD3BC1CEABC9A00F13CCE /* Main.storyboard */,
@@ -231,6 +234,7 @@
 			files = (
 				AD3BD3C31CEABC9A00F13CCE /* LaunchScreen.storyboard in Resources */,
 				AD3BD3C01CEABC9A00F13CCE /* Assets.xcassets in Resources */,
+				AD3BD3E71CEAC78900F13CCE /* Minecraft.ttf in Resources */,
 				AD3BD3BE1CEABC9A00F13CCE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
