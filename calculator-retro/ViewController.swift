@@ -17,6 +17,24 @@ class ViewController: UIViewController {
     // Create audio variable
     var btnSound: AVAudioPlayer!
     
+    // Calculator Variables
+    var leftVal = 0.0
+    var rightVal = 0.0
+    var runningNumber = ""
+    var op:operation = operation.empty
+    
+    //Enum
+    enum operation: String {
+        
+        case add = "+"
+        case subtract = "-"
+        case multiply = "*"
+        case divide = "/"
+        case equals = "="
+        case empty = ""
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +55,8 @@ class ViewController: UIViewController {
     // Actions
     @IBAction func onNumberButtonPress(btn: UIButton!){
         playAudio()
+        runningNumber += "\(btn.tag)"
+        updateDisplay()
         
         
     }
@@ -67,9 +87,12 @@ class ViewController: UIViewController {
     }
     @IBAction func onClearButtonPress(sender: AnyObject) {
         playAudio()
+        runningNumber = ""
+        updateDisplay()
         
     }
     
+    // Audio
     func playAudio(){
         
         if btnSound.playing{
@@ -80,6 +103,13 @@ class ViewController: UIViewController {
         btnSound.play()
         
     }
+    
+    func updateDisplay(){
+        
+        lblScreen.text = runningNumber
+        
+    }
+    
     
     
     
