@@ -97,9 +97,10 @@ class ViewController: UIViewController {
     }
     @IBAction func onClearButtonPress(sender: AnyObject) {
         playAudio()
-        runningNumber = ""
+        runningNumber = "0"
         opNew = operation.empty
         updateRunningDisplay()
+        runningNumber = ""
         
     }
     
