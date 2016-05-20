@@ -21,7 +21,8 @@ class ViewController: UIViewController {
     var leftVal = 0.0
     var rightVal = 0.0
     var runningNumber = ""
-    var op:operation = operation.empty
+    var opNew:operation = operation.empty
+    var opOld:operation = operation.empty
     
     //Enum
     enum operation: String {
@@ -56,39 +57,49 @@ class ViewController: UIViewController {
     @IBAction func onNumberButtonPress(btn: UIButton!){
         playAudio()
         runningNumber += "\(btn.tag)"
-        updateDisplay()
+        updateRunningDisplay()
+        
+        if opNew == operation.equals{
+            
+            opNew = operation.empty
+        }
         
         
     }
     
     @IBAction func onAddButtonPress(sender: AnyObject) {
         playAudio()
+        operationHandle(operation.add)
         
     }
     
     @IBAction func onSubtractButtonPress(sender: AnyObject) {
         playAudio()
+        operationHandle(operation.subtract)
         
     }
 
     @IBAction func onMultiplyButtonPress(sender: AnyObject) {
         playAudio()
+        operationHandle(operation.multiply)
         
     }
     
     @IBAction func onDivideButtonPress(sender: AnyObject) {
         playAudio()
-        
+        operationHandle(operation.divide)
     }
     
     @IBAction func onEqualButtonPress(sender: AnyObject) {
         playAudio()
+        operationHandle(operation.equals)
         
     }
     @IBAction func onClearButtonPress(sender: AnyObject) {
         playAudio()
         runningNumber = ""
-        updateDisplay()
+        opNew = operation.empty
+        updateRunningDisplay()
         
     }
     
@@ -104,14 +115,65 @@ class ViewController: UIViewController {
         
     }
     
-    func updateDisplay(){
+    // Display
+    func updateRunningDisplay(){
         
         lblScreen.text = runningNumber
         
     }
     
+    func operationHandle(op:operation){
+        
+        if runningNumber == ""{
+            opNew = op
+            return
+        }
+        
+        
+        opOld = opNew
+        opNew = op
+        
+        if opOld == operation.empty {
+        
+            leftVal = Double(runningNumber)!
+            runningNumber = ""
+            
+        }else{
+            
+            switch opOld{
+                
+                
+            case operation.add:
+                leftVal = leftVal + Double(runningNumber)!
+                
+            case operation.subtract:
+                leftVal = leftVal - Double(runningNumber)!
+                
+                
+           case operation.multiply:
+                leftVal = leftVal * Double(runningNumber)!
+                
+            case operation.divide:
+                leftVal = leftVal / Double(runningNumber)!
+                
+            case operation.equals: break
+                
+            default: break
+                
+                
+                
+            }
+            runningNumber = "\(leftVal)"
+            updateRunningDisplay()
+            runningNumber = ""
+            
+            
+            
+        }
+     
+        
+    }
     
-    
-    
+        
 }
 
